@@ -33,23 +33,22 @@
   <link rel="stylesheet" href="./plugins/style.css">
 </head>
 
-<body class="text-white">
+<body class="text-white" data-bs-spy="scroll" data-bs-target="#lokiMenu">
   <!-- 主選單 -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-md fixed-top" style="background-color: #4f3c51;" data-bs-theme="dark">
     <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#lokiMenu">
-        <span class="navbar-toggler-icon"></span>
+      <a class="navbar-brand" href="#"><i class="fa-solid fa-fire me-2"></i>洛奇營地渡假村</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#lokiMenu">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
       </button>
       <div class="collapse navbar-collapse" id="lokiMenu">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-        </ul>
+        <div class="navbar-nav ms-auto gap-md-4 my-3 my-md-0">
+          <a class="nav-link" href="#lokiPallet">營位介紹</a>
+          <a class="nav-link" href="#lokiPark">探索體驗</a>
+          <a class="nav-link" href="#lokiService">遊客服務</a>
+          <a class="nav-link" href="#lokiRule">營區守則</a>
+          <a class="nav-link" href="#lokiContact">聯絡我們</a>
+        </div>
       </div>
     </div>
   </nav>
@@ -102,15 +101,20 @@
       <i class="fa-solid fa-caret-right fa-2xl bg-dark rounded-start"></i>
     </button>
   </section>
-  <!-- 營位介紹 -->
-  <section id="lokiPallet" class="container py-5">
-    <div class="row row-cols-4 g-0 mb-5">
+  <!-- 圖片裝飾 -->
+  <section class="container pt-5">
+    <div class="row row-cols-4 g-0">
       <img src="https://picsum.photos/600/400/?random=10" class="img-fluid object-fit-cover col">
       <img src="https://picsum.photos/500/400/?random=10" class="img-fluid object-fit-cover col">
       <img src="https://picsum.photos/400/400/?random=10" class="img-fluid object-fit-cover col">
       <img src="https://picsum.photos/1000/400/?random=10" class="img-fluid object-fit-cover col">
     </div>
-    <header class="h2 border-start border-5 border-warning ps-3 mb-5">營位介紹</header>
+  </section>
+  <!-- 營位介紹 -->
+  <section id="lokiPallet" class="container py-5">
+    <header class="pt-5">
+      <h2 class="border-start border-5 border-warning ps-3 mb-5 ">營位介紹</h2>
+    </header>
     <article class="row row-cols-1 row-cols-md-2 g-3 g-md-5">
       <div class="col">
         <div class="card text-bg-dark overflow-hidden">
@@ -183,8 +187,8 @@
     </article>
   </section>
   <!-- 探索體驗 -->
-  <section id="lokiPark" class="pt-5">
-    <header class="mb-5 container">
+  <section id="lokiPark" class="py-5">
+    <header class="mb-5 container pt-5">
       <h2 class="border-start border-5 border-warning ps-3">探索體驗</h2>
       <p class="w-75 mx-auto py-5">洛奇渡假村腹地面積生態豐富，擁有眾多的設施周邊供您滿足整天的玩樂。不只玩的快樂也放得輕鬆。請盡情享受我們的人間樂園，帶回流連忘返的快樂心情，為您旅途點綴豐富回憶。
       </p>
@@ -292,15 +296,16 @@
   </section>
   <!-- 遊客服務 -->
   <section id="lokiService" class="pt-5">
-    <header class="container">
+    <header class="container pt-5">
       <h2 class="border-start border-5 border-warning ps-3 mb-5">遊客服務</h2>
     </header>
     <article class="container">
       <div class="row row-cols-1 row-cols-xl-3 gy-3">
         <div class="col">
           <div
-            class="card h-100 text-bg-secondary bg-gradient rounded-0 shadow-lg py-3 flex-md-row align-items-md-center flex-xl-column align-items-xl-stretch">
-            <div class="card-header text-center border-0">
+            class="card h-100 text-bg-secondary bg-gradient rounded-0 shadow-lg py-3 flex-md-row align-items-md-center flex-xl-column align-items-xl-stretch"
+            style="--bs-bg-opacity: 0.75;">
+            <div class="card-header text-center border-0 bg-transparent">
               <h3 class="card-title">設備租借</h3>
               <img src="https://picsum.photos/150/150/?random=10"
                 class="rounded-circle border border-info border-5 m-3">
@@ -357,8 +362,8 @@
         <div class="col">
           <div
             class="card h-100 text-bg-secondary bg-gradient rounded-0 shadow-lg py-3 flex-md-row align-items-md-center flex-xl-column align-items-xl-stretch"
-            style="--bs-bg-opacity: 0.25;">
-            <div class="card-header text-center border-0">
+            style="--bs-bg-opacity: 0.75;">
+            <div class="card-header text-center border-0 bg-transparent">
               <h3 class="card-title">會館設施</h3>
               <img src="https://picsum.photos/150/150/?random=10"
                 class="rounded-circle border border-warning border-5 m-3">
@@ -379,8 +384,8 @@
         <div class="col">
           <div
             class="card h-100 text-bg-secondary bg-gradient rounded-0 shadow-lg py-3 flex-md-row align-items-md-center flex-xl-column align-items-xl-stretch"
-            style="--bs-bg-opacity: 0.2;">
-            <div class="card-header text-center border-0">
+            style="--bs-bg-opacity: 0.75;">
+            <div class="card-header text-center border-0 bg-transparent">
               <h3 class="card-title">美味饗宴</h3>
               <img src="https://picsum.photos/150/150/?random=10"
                 class="rounded-circle border border-success border-5 m-3">
@@ -405,6 +410,84 @@
                 <li class="py-1">拋棄式烤爐1組、木炭2斤、餐具全套組1組</li>
                 <li class="py-1">特調燒烤烤肉醬1份、精緻佐料包1份</li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  <!-- 營區守則 -->
+  <section id="lokiRule" class="pt-5">
+    <header class="container pt-5">
+      <h2 class="border-start border-5 border-warning ps-3 mb-5">營區守則</h2>
+    </header>
+    <article class="container">
+      <div class="row row-cols-1 row-cols-md-2 gy-3 flex-row-reverse">
+        <div class="col">
+          <img src="https://picsum.photos/800/600/?random=10" class="img-fluid img-thumbnail">
+        </div>
+        <div class="col">
+          <div class="accordion accordion-flush" id="lokiAccordion">
+            <div class="accordion-item mb-3 rounded-5 overflow-hidden shadow-sm">
+              <h2 class="btn accordion-header accordion-button" data-bs-toggle="collapse" data-bs-target="#lokiItem1">
+                <i class="fa-solid fa-circle-question me-2"></i>
+                <span>營地營業進場時間</span>
+              </h2>
+              <div id="lokiItem1" class="accordion-collapse collapse show" data-bs-parent="#lokiAccordion">
+                <div class="accordion-body">
+                  <p>非連假 : 入場時間10:00 / 退場時間12:00</p>
+                  <p>連假 : 入場時間12:00 / 退場時間12:00</p>
+                  <ul>
+                    <li>預訂(星期五)二天一夜露營，請於星期六上午10:00前離場，以提供星期六訂位者使用，造成不便敬請見諒。</li>
+                    <li>連續假日營地紮營時間為中午12點至隔日中午12點，以供下位紮營者使用。</li>
+                    <li>週五(或前一晚) 提前進場夜衝（限隔日續住者) 17:00~22:00 可入營，17:00前到場，以整日收費計算，請於23:00前搭營完成，避免打擾已就寢露友。</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item my-3 rounded-5 overflow-hidden shadow-sm">
+              <h2 class="btn accordion-header accordion-button collapsed" data-bs-toggle="collapse"
+                data-bs-target="#lokiItem2">
+                <i class="fa-solid fa-circle-question me-2"></i>
+                <span>裸湯開放時間</span>
+              </h2>
+              <div id="lokiItem2" class="accordion-collapse collapse" data-bs-parent="#lokiAccordion">
+                <div class="accordion-body">
+                  <p>男女分浴日式庭園裸湯，以獨特山景、花草環繞著戶外湯池，男湯、女湯定期更換 。</p>
+                  <p>＊注意事項：</p>
+                  <ul>
+                    <li>開放時間：平日11:00~22:00 假日09:00~23:00。</li>
+                    <li>假日定義：週六、週日、連續假日及國定假日。</li>
+                    <li>使用觀景溫泉需年滿16歲以上（必要時請出示證件）。</li>
+                    <li>觀景風呂限會員及住宿客加價使用。</li>
+                  </ul>
+                  <p>（如遇養護或特殊狀況，依現場營業情況調整。） </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item my-3 rounded-5 overflow-hidden shadow-sm">
+              <h2 class="btn accordion-header accordion-button collapsed" data-bs-toggle="collapse"
+                data-bs-target="#lokiItem3">
+                <i class="fa-solid fa-circle-question me-2"></i>
+                <span>預定露營前解約日</span>
+              </h2>
+              <div id="lokiItem3" class="accordion-collapse collapse" data-bs-parent="#lokiAccordion">
+                <div class="accordion-body">
+                  <p> 雨天不露營之辦法：遇雨天不露營者請勿先行訂位，建議於出遊當天，您可以接受的天氣、路況，再以電話聯繫營主訂位，以免造成雙方之間的困擾。</p>
+                  <p>14天內退訂比例（不做延期請多包涵），退款訂單手續費酌收50元。</p>
+                  <ul>
+                    <li>14日之前: 100%（全退）</li>
+                    <li>10~13日: 70%</li>
+                    <li>7~9日: 50%</li>
+                    <li>4~6日: 40%</li>
+                    <li>2~3日: 0%（非天候因素，不予退還）</li>
+                    <li>前一日: 0%（非天候因素，不予退還）</li>
+                    <li>當日: 0% （非天候因素，不予退還）</li>
+                  </ul>
+                  <p></p>
+                  <p>天候因素僅限於：當日發布颱風（陸警）、豪雨特報、大雨特報則全額退費。</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
